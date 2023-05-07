@@ -5,11 +5,10 @@ Authors@R:
     person("Leonard", "Greski", , "len@greskilabs.com", role = c("aut", "cre"))
 Description: Retrieve United Nations population data by using the UN data portal application 
     programming interface. A simplified interface to the UN API that provides error handling.
-License: GPL (>= 3)
+License: GPL (>= 3) + file LICENSE
 URL: https://github.com/lgreski/unpopr 
 BugReports: https://github.com/lgreski/unpopr/issues 
 Imports:
-    httr,
     jsonlite
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)

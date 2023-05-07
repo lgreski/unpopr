@@ -5,12 +5,10 @@ retrieve_content<- function(aSource) {
 
   tryCatch({
     # expr goes here
-    require(httr)
-    require(jsonlite)
     aResult <- jsonlite::fromJSON(aSource)
     aDataFrame <- aResult$data
     while(!is.null(aResult$nextPage)){
-      aResult <- fromJSON(aResult$nextPage)
+      aResult <- jsonlite::fromJSON(aResult$nextPage)
       aDataFrame <- rbind(aDataFrame,aResult$data)
     }
     # return result data
