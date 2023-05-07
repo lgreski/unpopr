@@ -7,7 +7,7 @@ retrieve_content<- function(aSource) {
     # expr goes here
     require(httr)
     require(jsonlite)
-    aResult <- fromJSON(aSource)
+    aResult <- jsonlite::fromJSON(aSource)
     aDataFrame <- aResult$data
     while(!is.null(aResult$nextPage)){
       aResult <- fromJSON(aResult$nextPage)

@@ -1,12 +1,19 @@
 Package: unpopr
-Title: What the Package Does (One Line, Title Case)
+Title: Retrieve United Nations Population Data from UN Data Portal
 Version: 0.0.0.9000
 Authors@R: 
-    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"),
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+    person("Leonard", "Greski", , "len@greskilabs.com", role = c("aut", "cre"))
+Description: Retrieve United Nations population data by using the UN data portal application 
+    programming interface. A simplified interface to the UN API that provides error handling.
+License: GPL (>= 3)
+URL: https://github.com/lgreski/unpopr 
+BugReports: https://github.com/lgreski/unpopr/issues 
+Imports:
+    httr,
+    jsonlite
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.2.3
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
