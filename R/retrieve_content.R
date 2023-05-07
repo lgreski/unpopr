@@ -1,8 +1,10 @@
 #
-# retrieve_content
+# retrieve_content.R
+# given a source URL, retrieve the content and convert it from JSON
+# into a data frame
 
 retrieve_content<- function(aSource) {
-
+  if(!is_valid_url(aSource)) stop(paste("invalid url:", aSource))
   tryCatch({
     # expr goes here
     aResult <- jsonlite::fromJSON(aSource)
