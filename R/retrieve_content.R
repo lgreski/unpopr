@@ -8,13 +8,19 @@ retrieve_content<- function(aSource) {
   tryCatch({
     # expr goes here
     aResult <- jsonlite::fromJSON(aSource)
-    aDataFrame <- aResult$data
-    while(!is.null(aResult$nextPage)){
-      aResult <- jsonlite::fromJSON(aResult$nextPage)
-      aDataFrame <- rbind(aDataFrame,aResult$data)
-    }
-    # return result data
-    aDataFrame
+
+    if(class(aResult) == "list"){
+      aDataFrame <- aResult$data
+      while(!is.null(aResult$nextPage)){
+        aResult <- jsonlite::fromJSON(aResult$nextPage)
+        aDataFrame <- rbind(aDataFrame,aResult$data)
+      }
+      # return result data
+      return(aDataFrame)
+    } else {
+         # if not a list, the data result is not a list, it's a data frame so return it
+         return(aResult)
+      }
   },error = function(error_message){
     message(error_message)
     return(NULL)
