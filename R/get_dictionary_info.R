@@ -8,7 +8,7 @@
 #' @export
 #' @examples
 #' get_dictionary_info("topics")
-#' get_dictionary_info("topics","FP")
+#' get_dictionary_info("topics","FP,IGME"))
 #' get_dictionary_info("locations")
 #' get_dictionary_info("sources")
 
