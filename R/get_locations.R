@@ -2,7 +2,22 @@
 # get_locations.R
 #
 # get locations from the UN population API
-
-get_locations <- function(aList) {
+#
+#' get the geographical areas (locations) included in the UN population API.
+#' @param theLocations A string
+#' @returns A data frame'
+#' @export
+#' @examples
+#' get_locations(704)
+#' get_locations("VN")
+#' get_locations(paste(c(1,3),collapse=","))
+#' get_locations() # returns all 284 locations
+get_locations <- function(theLocations="") {
+  aPropMgr <- properties()
+  theURL <- paste0(aPropMgr$get_base_url(),
+                   "/locations/",
+                   theLocations)
+  # get the data
+  retrieve_content(theURL)
 
 }

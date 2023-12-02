@@ -2,3 +2,4 @@
 
 export(get_dictionary_info)
 export(get_indicators)
+export(get_locations)
