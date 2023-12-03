@@ -8,9 +8,9 @@
 #' @returns A data frame'
 #' @export
 #' @examples
-#' get_locations(704)
-#' get_locations("VN")
-#' get_locations(paste(c(1,3),collapse=","))
+#' get_locations(36) # get Australia
+#' get_locations("VN") # get Vietnam with ISO2 code
+#' get_locations(paste(c(4,8),collapse=","))
 #' get_locations() # returns all 284 locations
 get_locations <- function(theLocations="") {
   aPropMgr <- properties()
