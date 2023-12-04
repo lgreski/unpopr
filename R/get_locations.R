@@ -14,7 +14,7 @@
 #' get_locations() # returns all 284 locations
 get_locations <- function(theLocations="") {
   aPropMgr <- properties()
-  theURL <- paste0(aPropMgr$get_base_url(),
+  theURL <- paste0(aPropMgr$get_base_url_version(),
                    "/locations/",
                    theLocations)
   # get the data

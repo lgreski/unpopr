@@ -15,7 +15,7 @@
 get_dictionary_info <- function(aType,aSubset=""){
   # render the URL
   aPropMgr <- properties()
-  theURL <- paste0(aPropMgr$get_base_url(),
+  theURL <- paste0(aPropMgr$get_base_url_version(),
                    "/",aType,"/",aSubset)
   # get the data
   retrieve_content(theURL)
