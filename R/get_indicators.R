@@ -3,7 +3,8 @@
 #
 # form of the request is base_url/indicators/<list of indicators>
 #'
-#' get population measurements (indicators) from the UN population API.
+#' `get_indicators()`: get population measurements (indicators) from the
+#' UN population API.
 #' @param theIndicators A string
 #' @returns A data frame'
 #' @export
